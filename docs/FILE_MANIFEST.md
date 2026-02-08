@@ -66,37 +66,6 @@ This document lists all downloadable files for the Hybrid System Monitoring Plat
 | `ml/anomaly_detection.py` | Python | Z-score + Isolation Forest anomaly detection |
 | `ml/trend_prediction.py` | Python | Linear regression trend prediction |
 
-### REST API (FastAPI Server)
-
-| File | Type | Purpose |
-|------|------|---------|
-| `api/__init__.py` | Python | Package marker |
-| `api/server.py` | Python | FastAPI endpoints for metrics, anomalies, trends, events |
-
-### Documentation
-
-| File | Type | Purpose |
-|------|------|---------|
-| `README.md` | Markdown | Complete documentation, features, installation, usage |
-| `QUICKSTART.md` | Markdown | 5-minute setup guide, common commands |
-| `ARCHITECTURE.md` | Markdown | Deep-dive architecture, design patterns, scalability |
-| `FILE_MANIFEST.md` | Markdown | This file - complete file listing |
-
-### Package Initialization
-
-| File | Type | Purpose |
-|------|------|---------|
-| `__init__.py` | Python | Package marker + docstrings for all modules |
-
-## Total File Count
-
-- **Python files:** 18
-- **eBPF C files:** 3
-- **Configuration:** 1
-- **Documentation:** 4
-- **Package markers:** 6
-
-**Total: 32 files**
 
 ## Quick File Reference
 
@@ -240,33 +209,9 @@ After download, verify all files are present:
 - [ ] ml/anomaly_detection.py
 - [ ] ml/trend_prediction.py
 
-### Documentation Files (Recommended)
-
-- [ ] README.md
-- [ ] QUICKSTART.md
-- [ ] ARCHITECTURE.md
-
 ### eBPF Programs (For Full Features)
 
 - [ ] ebpf/programs/syscall_trace.bpf.c
 
-## Getting Started
-
-1. **Read:** README.md (5 min)
-2. **Setup:** QUICKSTART.md (10 min)
-3. **Run:** `sudo python3 main.py`
-4. **Test:** `curl http://localhost:8000/metrics/realtime`
-
-## Support
-
-For issues with specific files:
-- **Installation:** QUICKSTART.md → "Troubleshooting"
-- **Architecture:** ARCHITECTURE.md → "Components"
-- **API:** README.md → "API Endpoints"
-
----
-
-**File Manifest Version:** 1.0
-**Last Updated:** 2024-12-18
 **Kernel Requirement:** 5.15+
 **Python Version:** 3.10+
