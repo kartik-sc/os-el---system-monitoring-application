@@ -1,0 +1,23 @@
+{
+  "ebpf": {
+    "enable_syscall_trace": true,
+    "enable_exec_monitor": true,
+    "enable_io_monitor": true,
+    "buffer_pages": 64
+  },
+  "collectors": {
+    "cpu_interval": 1.0,
+    "memory_interval": 1.0,
+    "disk_interval": 2.0,
+    "network_interval": 2.0,
+    "process_interval": 3.0
+  },
+  "ml": {
+    "anomaly_threshold": 0.7,
+    "enable_trend_prediction": true
+  },
+  "dashboard": {
+    "enable": true,
+    "refresh_rate": 1
+  }
+}
