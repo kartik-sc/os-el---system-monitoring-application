@@ -87,7 +87,7 @@ sudo python3 main.py
 # [2024-12-18 22:00:00] INFO [ingestion.event_bus] EventBus initialized with buffer_size=10000
 # [2024-12-18 22:00:00] INFO [main] ✓ Event Bus initialized
 # [2024-12-18 22:00:01] INFO [main] ✓ Stream Processor initialized
-# [2024-12-18 22:00:01] INFO [main] ✓ Loaded 3 eBPF programs
+# [2024-12-18 22:00:01] INFO [main] ✓ Loaded 1 eBPF program (syscall tracer)
 # [2024-12-18 22:00:01] INFO [main] ✓ Initialized 5 user-space collectors
 # [2024-12-18 22:00:01] INFO [main] ✓ ML Pipelines initialized
 # [2024-12-18 22:00:01] INFO [main] ✓ API Server configured (0.0.0.0:8000)
@@ -141,9 +141,11 @@ system-monitoring-app/
 ├── ebpf/
 │   ├── programs/
 │   │   ├── __init__.py
-│   │   ├── syscall_trace.bpf.c
-│   │   ├── exec_monitor.bpf.c
-│   │   └── io_monitor.bpf.c
+│   │   ├── syscall_trace.bpf.c      # implemented
+│   │   └── (templates)
+│   │       # exec_monitor.bpf.c and io_monitor.bpf.c are referenced
+│       # in the docs as extension templates and are not supplied
+│       # as compiled kernel programs in this repository.
 │   └── loaders/
 │       ├── __init__.py
 │       ├── syscall_loader.py

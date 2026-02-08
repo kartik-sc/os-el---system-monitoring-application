@@ -94,14 +94,17 @@ system-monitoring/
 │   └── processes.py                 # Per-process metrics
 ├── ebpf/
 │   ├── programs/
-│   │   ├── syscall_trace.bpf.c      # Syscall tracing (eBPF)
-│   │   ├── exec_monitor.bpf.c       # Process creation tracing
-│   │   └── io_monitor.bpf.c         # Block I/O tracing
+│   │   ├── syscall_trace.bpf.c      # Syscall tracing (eBPF) — implemented
+│   │   └── (templates)
+│   │       # Note: other eBPF program names (exec_monitor.bpf.c,
+│       # io_monitor.bpf.c) are referenced in the docs as templates
+│       # and extension points; only `syscall_trace.bpf.c` is
+│       # implemented/available in this repository.
 │   └── loaders/
 │       ├── __init__.py
 │       ├── syscall_loader.py        # Syscall tracer loader
-│       ├── exec_loader.py           # Process creation loader
-│       └── io_loader.py             # Block I/O loader
+│       ├── exec_loader.py           # Process creation loader (template/loader present)
+│       └── io_loader.py             # Block I/O loader (template/loader present)
 ├── ml/
 │   ├── __init__.py
 │   ├── anomaly_detection.py         # Isolation Forest + z-score
@@ -187,7 +190,7 @@ sudo python3 main.py --config config/monitoring.json
 # [INFO] ============================================================
 # [INFO] ✓ Event Bus initialized
 # [INFO] ✓ Stream Processor initialized
-# [INFO] ✓ Loaded 3 eBPF programs
+# [INFO] ✓ Loaded 1 eBPF program (syscall tracer)
 # [INFO] ✓ Initialized 5 user-space collectors
 # [INFO] ✓ ML Pipelines initialized
 # [INFO] ✓ API Server configured (0.0.0.0:8000)

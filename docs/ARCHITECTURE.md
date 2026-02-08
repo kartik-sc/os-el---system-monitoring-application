@@ -51,6 +51,11 @@
 │ ├─ Maps: syscall_times (latency), syscall_counts (frequency)  │
 │ └─ Minimal CPU overhead (~1-2%)                                │
 └─────────────────────────────────────────────────────────────────┘
+
+> Note: In this repository the only implemented eBPF program is `syscall_trace.bpf.c`.
+> References to an `exec_monitor` or `io_monitor` are design/extension points and
+> templates in the documentation; those programs are not provided as compiled
+> kernel programs in this release.
 ```
 
 ## Component Architecture
